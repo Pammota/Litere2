@@ -47,3 +47,5 @@ inp = input("Say Something: ")
 strToAscii(inp)
  #to do:
  #make auto text wrap
+ #numbers
+ #special characters
