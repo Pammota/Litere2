@@ -42,10 +42,23 @@ def strToAscii(string,builder='█'):
   #formatting prints
   
 
+while True:
+  print('''What do you want to do?
+    1.Enter text;
+    2.Exit;
+  ''')
+  doit = input()
+  if doit=='1':
+    inp = input("Enter text:\n")
+    strToAscii(inp)
+    input()
+  elif doit=='2':
+    break
+  else:
+    print("Invalid option, try again.\n")
+    continue
 
-inp = input("Say Something: ")
-strToAscii(inp)
+
  #to do:
  #make auto text wrap
- #numbers
- #special characters
+ 
