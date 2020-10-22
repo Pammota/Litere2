@@ -1,3 +1,5 @@
+#!/usr/bin/env python3
+
 #importing letter matrix and dict from letters.py
 from letters import *
 
