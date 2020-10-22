@@ -10,9 +10,7 @@ def strToAscii(string,builder='█'):
   :param string:Insert a string of text.
   :param builder:Insert the builder of the ascii words. If left empty then '█' will be used.
   '''
-
-
-
+  
   #converts list to ascii line and prints it
   def picLine(li):
     le = len(li)
@@ -28,6 +26,7 @@ def strToAscii(string,builder='█'):
   print()
   #formatting prints
 
+  #initializari
   li = list(string)
   stlen = len(li)
   mxlen = 19
@@ -50,6 +49,8 @@ def strToAscii(string,builder='█'):
       l = list(s)
       lineByLinePrint(l,len(l))
 
+    #returneaza cate caractere mai sunt pana la 
+    #terminarea propozitiei, de la cuvantul cu indicele i in colo
     def remaincalc(li,i):
       #listcpy = li.copy()
       lendelist = len(li)
@@ -60,7 +61,8 @@ def strToAscii(string,builder='█'):
           emptylist.append(' ')
       news = ''.join(emptylist)
       return len(news)
-
+    
+    #returneaza o lista cu cuvintele ramase dupa indicele i din lista li
     def remainshow(li,i):
       #listcpy = li.copy()
       lendelist = len(li)
@@ -69,11 +71,12 @@ def strToAscii(string,builder='█'):
         emptylist.append(li[j])
       return emptylist
       
-
+    #initializari
     lister = strng.split() #lista cuvinte 
     constructlist = [] #lista goala
     le = len(lister) # lungime lista cuvinte
-    #strng - sirul initial in format string
+    #strng = sirul initial in format string
+    
     if len(strng) <= mxlene: #mxlene=19
       lineByLinePrint(list(strng),len(strng)) #nu depaseste 19 char, afisam!
     else:
@@ -89,10 +92,8 @@ def strToAscii(string,builder='█'):
           constructlist.clear() #curata functia pt urmatoarea linie din propozitie
           indexi=i
       afisam(remainshow(lister,indexi))
-        
-
-          
-
+                
+  #calling the master function
   splitter(string,mxlen)
 
   #formatting prints
@@ -101,7 +102,7 @@ def strToAscii(string,builder='█'):
   print()
   #formatting prints
   
-
+#ciclu infinit pana la citirea lui 2
 while True:
   print('''What do you want to do?
     1.Enter text;
@@ -116,9 +117,5 @@ while True:
     break
   else:
     print("Invalid option, try again.\n")
-    continue
-
-
- #to do:
- #make auto text wrap
- 
+    
+#finished 23/10/2020 - 01:14 AM
