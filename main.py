@@ -10,6 +10,9 @@ def strToAscii(string,builder='█'):
   :param string:Insert a string of text.
   :param builder:Insert the builder of the ascii words. If left empty then '█' will be used.
   '''
+
+
+
   #converts list to ascii line and prints it
   def picLine(li):
     le = len(li)
@@ -27,13 +30,70 @@ def strToAscii(string,builder='█'):
 
   li = list(string)
   stlen = len(li)
+  mxlen = 19
 
-  #goes line by line on all matrix at once and prints
-  for y in range(0,5):
-    for x in range(0,stlen):
-      picLine(chtoli[li[x]][y])
-      print(' ',end='')
-    print()
+ #goes line by line on all matrix at once and prints
+  def lineByLinePrint(lis,stln):
+    for y in range(0,5):
+      for x in range(0,stln):
+        picLine(chtoli[lis[x]][y])
+        print(' ',end='')
+      if y == 5:
+        print()
+      else:
+        print()
+
+  #splits string in 19 char max lists
+  def splitter(strng, mxlene):
+    def afisam(lest):
+      s = ' '.join(lest)
+      l = list(s)
+      lineByLinePrint(l,len(l))
+
+    def remaincalc(li,i):
+      #listcpy = li.copy()
+      lendelist = len(li)
+      emptylist=[]
+      for j in range(i,lendelist):
+       emptylist.append(li[j])
+       if j!=lendelist-1:
+          emptylist.append(' ')
+      news = ''.join(emptylist)
+      return len(news)
+
+    def remainshow(li,i):
+      #listcpy = li.copy()
+      lendelist = len(li)
+      emptylist=[]
+      for j in range(i,lendelist):
+        emptylist.append(li[j])
+      return emptylist
+      
+
+    lister = strng.split() #lista cuvinte 
+    constructlist = [] #lista goala
+    le = len(lister) # lungime lista cuvinte
+    #strng - sirul initial in format string
+    if len(strng) <= mxlene: #mxlene=19
+      lineByLinePrint(list(strng),len(strng)) #nu depaseste 19 char, afisam!
+    else:
+      i = 0
+      indexi =0
+      while i<le:#parcurgem lista cu cuvinte
+        if (len(' '.join(constructlist))+len(lister[i])+1) <= mxlene: #mxlene=19
+          constructlist.insert(i,lister[i]) #daca adaugam cuvantul urmator la lista de constructie nu depaseste 19
+          i+=1
+        else: #mxlene =19
+          afisam(constructlist) #afisam ce am construit, stergem, si reluam
+          print()
+          constructlist.clear() #curata functia pt urmatoarea linie din propozitie
+          indexi=i
+      afisam(remainshow(lister,indexi))
+        
+
+          
+
+  splitter(string,mxlen)
 
   #formatting prints
   print()
