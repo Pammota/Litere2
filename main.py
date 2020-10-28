@@ -1,17 +1,17 @@
-#!/usr/bin/env python3
+##!/usr/bin/env python3
 
 #importing letter matrix and dict from letters.py
 from letters import *
 
 #the function that converts a string to ascii console text
 def strToAscii(string,builder='█'):
-  '''
-  Info:This is a function that takes as arguments a string and a character and creates a 5x5 pixel representation of that string in ASCII, printing it in the console.
+  """
+  This is a function that takes as arguments a string and a character and creates a 4x5 pixel representation of that string in ASCII, printing it in the console.
 
-
-  :param string:Insert a string of text.
-  :param builder:Insert the builder of the ascii words. If left empty then '█' will be used.
-  '''
+  :param string: Insert a string of text.
+  :param builder: Insert the builder of the ascii words. If left empty then '█' will be used.
+  :return: Functions returns nothing.
+  """
   
   #converts list to ascii line and prints it
   def picLine(li):
