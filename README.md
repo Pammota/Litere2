@@ -1,7 +1,7 @@
 # Litere2
 A program that transforms a string of characters into a 5x5 pixelated ASCII character writing in the terminal/cmd.
 
-[![N|Solid](https://i.imgur.com/cY6qvw7.png)]
+![N|Solid](https://i.imgur.com/twnW6O8.png)
 
 # Copyright
 This program and it's source code are free to use or modify, as long as credit is properly given.
