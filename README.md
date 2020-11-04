@@ -3,9 +3,6 @@
 
 ![N|Solid](https://i.imgur.com/twnW6O8.png)
 
-# Copyright
-  This program and it's source code are free to use or modify, as long as credit is properly given.
-
 # Feedback
   If you have any ideas or suggestions I am open to them.
 
