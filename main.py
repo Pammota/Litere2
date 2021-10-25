@@ -1,6 +1,7 @@
 ##!/usr/bin/env python3
 
 #importing letter matrix and dict from letters.py
+#LOL
 from letters import *
 
 #the function that converts a string to ascii console text
